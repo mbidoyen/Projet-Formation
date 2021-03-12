@@ -1,0 +1,517 @@
+html{
+    background-color: 	#090438;
+}
+
+body{
+    width : 80%;
+    margin: 0 auto;
+    
+}
+
+header{
+    margin-top: 3%;
+    text-align: right;
+    border : 3px solid #8B4513;
+    font-family: 'Great Vibes', cursive;
+    height: 200px;
+    background-image: url(../images/banniere_header.png);
+    background-size:initial;
+    background-position-x: center;
+    
+}
+
+header h1{
+    text-align: left;
+    font-size: 300%;
+    margin: 0 20px;
+    padding-top: 10px;
+}
+
+
+
+/***********************************************************/
+/*****************PAGE ACCEUIL (INDEX)**********************/
+/***********************************************************/
+
+h2{
+    text-align: center;
+    margin: 0 auto;
+}
+
+header section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    position: relative;
+    top: 100px;
+}
+
+#login{
+    font-size: 150%;
+    background-color:transparent;
+    border: none;
+    color:black;
+    transition: 0.3s;
+    outline-style: none;
+}
+
+#login:hover{
+    color : white;
+}
+
+#administration{
+    padding-right: 1%;
+    font-size: 150%;
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+#administration:hover{
+    opacity: 1;
+}
+
+main{
+    margin-top: 1%;
+    background-color: #F0E7D5;
+    padding-bottom: 2%;
+    border : 3px solid #8B4513;
+}
+
+.hide{
+    display:none;
+}
+
+fieldset{
+    margin-top:1%;
+    display: flex;
+    flex-direction: row;
+    background-color: #F0E7D5;;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+    border: 3px solid #642D06;
+}
+
+.hide fieldset label{
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    color:#642d06;
+}
+
+.hide fieldset input{
+    margin: 5px;
+}
+
+.boutonconnexion{
+   
+    
+    font-family: 'Akaya Telivigala', cursive;
+    
+    background-color: #642d06;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.fas{
+    padding-right: 5px;
+}
+
+.far{
+
+    padding-right: 5px;
+}
+
+.acceuil{
+    font-family: 'Lobster', cursive;
+    margin-left: 20px;
+    color : #642d06;
+}
+
+
+
+.articleindex{
+    border: 2px solid #642D06;
+    width:60%;
+    margin: 0 auto 1%;
+    padding-left: 1%;
+    border-radius: 20px;
+    box-shadow: 5px 1px 10px 0px rgba(0,0,0,0.29);
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.articleindex:hover{
+    opacity: 1;
+}
+
+.articleindex h3{
+    font-size: 150%;
+    margin: 2%;
+    color:#642d06;
+    font-family: 'Lobster', cursive;
+}
+
+.articleindex a{ 
+    text-decoration: none;
+}
+
+.fa-hand-point-right{
+    padding-right: 5px;
+}
+
+.pindex{
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blockquoteindex{
+    text-align: right;
+    color: grey;
+    font-style: italic;
+}
+
+/**************************************************************/
+/**********************INSCRIPTION*****************************/
+/**************************************************************/
+
+.section-comm-inscription{
+        
+        padding: 5px;
+        color:#642d06;
+        text-align: center;
+        font-size: x-large;
+    }
+    
+    .section-comm-inscription fieldset{
+        border: 3px solid #642d06;
+        width: 60%;
+        margin: 3% auto;
+        padding: 3%;
+        border-radius: 15px;
+    }
+    
+    .section-comm-inscription fieldset legend{
+        font-family: 'Akaya Telivigala', cursive;
+        padding: 5px;
+        color:#642d06;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    .labelinscription{
+        font-size: medium;
+    }
+
+    .inscription input{
+        margin-bottom: 5%;
+        font-size: large;
+    }
+
+    .Sizeemailinput::placeholder{
+        font-size: 90%;
+    }
+
+    .inscription{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inscription label{
+        width: 50%;
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bolder;
+        color:#642d06;
+        margin : 2% 0%;
+    }
+
+/*****************************************************/
+/***************PADE ADMINISTRATION*******************/
+/*****************************************************/
+
+#toplink{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.retouracceuil{
+    font-size: 23px;
+    text-decoration: none;
+    color: #642d06;
+    margin: 10px;
+    
+}
+
+.retouracceuil:hover{
+    text-decoration: underline;
+}
+
+.deconnexion{
+    font-size: 23px;
+    text-decoration: none;
+    color: #642d06;
+    margin: 10px;
+    
+}
+
+.deconnexion:hover{
+    text-decoration: underline;
+}
+
+.nouvelarticle{
+    font-size: 20px;
+    text-decoration: none;
+    color: #642d06;
+    margin-left: 30px;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.nouvelarticle:hover{
+    text-decoration: underline;
+}
+
+.entetetableau{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#listeTableauarticle{
+    width: 90%;
+    margin : 0 auto;
+    border-collapse: collapse;
+}
+
+th{
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    border: 1px solid #642d06;;
+    background-color: #BBAE98;
+}
+
+#listeTableauarticle tr:nth-child(even){
+    background-color: #E0CDA9;
+}
+
+#listeTableauarticle tr:nth-child(odd){
+    background-color: #F5DEB3;
+}
+
+.thtitre{
+    width: 25%;
+}
+
+.tharticle{
+    width: 40%;
+}
+
+td{
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    border: 1px solid #642d06;;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 0;
+}
+
+.hidetd{
+    border: none;
+    text-overflow: clip;
+    background-color: #F0E7D5;
+    
+}
+
+#listeTableauarticle tr:hover {
+    background-color: #E1D2B8;
+}
+
+.tableaulien{
+    text-decoration: none;
+    color: #642d06;
+}
+
+.tableaulien:hover{
+    color: #9b623a;
+}
+
+.fa-pencil-alt{
+    color:#642d06;
+}
+
+.fa-times{
+    color:#642d06;
+    padding-left: 5px;
+}
+
+
+/********************************************************************/
+/***********************PAGE DETAIL ARTICLE**************************/
+/********************************************************************/
+
+#detail-article-section{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.detail-article-titre{
+    text-align: left;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.pdetail{
+    width: 70%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 20px;
+}
+
+.affichagecomm{
+    border-top: 1px solid #642d06;
+    border-bottom: 1px solid #642d06;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+
+.pseudocomm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 0;
+}
+
+.pseudo{
+    color:#642d06;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.deleteAllcomm{
+    margin-left: 70%;
+    text-decoration: none;
+    font-size: 18px;
+    color:#642d06;
+}
+
+.deleteAllcomm:hover{
+    text-decoration: underline;
+}
+
+.section-comm{
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    
+}
+
+.section-comm fieldset{
+    border: 3px solid #642d06;
+    width: 60%;
+    margin: 3% auto;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+.section-comm fieldset legend{
+    font-family: 'Akaya Telivigala', cursive;
+    padding: 5px;
+    color:#642d06;
+    text-align: left;
+    font-size: x-large;
+}
+
+#addcomm{
+    width : 100%;
+    margin: 0 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+#addcomm label{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    color:#642d06;
+    margin : 2% 0%;
+}
+
+
+.bouton{
+    margin-top: 3%;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: x-large;
+    background-color: #642d06;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*********************************************************************/
+/*************************NOUVEL ARTICLE******************************/
+/*********************************************************************/
+
+#lienadmin{
+    margin-right: 1%;
+    font-size: 150%;
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: 0.5s;
+    position: relative;
+    top: 50%;
+}
+
+#lienadmin:hover{
+    opacity: 1;
+}
+
+#fieldsetnewarticle{
+    width:60%;
+    margin: 0 auto;
+    border: 3px solid #642d06;
+    border-radius:15px;
+}
+
+#fieldsetnewarticle legend{
+    text-align: left;
+    padding: 5px;
+    margin-left: 2%;
+    font-family: 'Akaya Telivigala', cursive;
+    color: #642d06;
+}
+
+
+
+
+#categorie{
+    margin-top: 0%;
+    margin-bottom: 3%;
+    width: 40%;
+}
+
+.boutonnouvelarticle{
+    
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: x-large;
+    background-color: #642d06;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Blog sur Final Fantasy</title>
+    <script src="https://kit.fontawesome.com/ec539eaecf.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+   <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+    <header>
+        
+        <h1 class="titre">Blog Final Fantasy</h1>
+
+        <section>
+        <button id="login">S'identifier</button>
+
+        <a id="administration" href="ressourceadministration.php"><i class="fas fa-users-cog"></i> Administration</a>
+    </section>
+    
+</header>
+<form class="hide" method="POST" action="login.php">
+            <fieldset>
+        
+                <label for="email">email : </label>
+                <input type="email" name="email" placeholder="Entrez votre email">
+        
+                <label for="password">Mot de passe : </label>
+                <input type="password" name="password" placeholder="Entrez votre mot de passe">
+        
+                <input class="boutonconnexion" type="submit" value="Se connecter" name="connexion">
+                <input class="boutonconnexion" type="button" value="S'inscrire" onclick="window.location.href ='inscription.phtml'">
+        
+            </fieldset>
+        </form>
+<main>
+        
+
+    
+
+        
+        <h1 class="acceuil"><i class="fas fa-home"></i>Accueil</h1>
+
+        <section class="listearticle">
+            <?php 
+
+            include 'connexionBDD.php';
+
+            $query = $pdo->prepare
+            (
+                'SELECT * FROM articles ORDER BY date_article DESC'
+            );
+            
+            $query->execute();
+            
+            $articles = $query->fetchAll();
+            
+            foreach($articles as $article){ ?>
+                <article class="articleindex">
+                    <a href='donneearticle.php?id=<?=$article['id_article']?>'><h3><i class="far fa-hand-point-right"></i><?=$article['titre']?></h3>
+                    <p class="pindex"><?=$article['article']?></p>
+                    <blockquote class="blockquoteindex">Rédigé par <?=$article['pseudo']?> le <?=$article['date_article']?>.</blockquote></a>
+                </article>
+                 <?php } ?>
+    
+        </section>
+
+        <blockquote><em>Blog réalisé par Mathieu<em></blockquote>
+
+    </main>
+    <script src="JS/event.js"></script>
+    </body>
+</html>

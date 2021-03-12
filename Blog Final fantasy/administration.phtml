@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Blog sur Final Fantasy</title>
+    <script src="https://kit.fontawesome.com/ec539eaecf.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+   <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+</head>
+<body>
+    <header>
+        
+        <h1 class="titre">Blog Final Fantasy</h1>
+        
+    </header>
+
+    <main>
+
+        <section id="toplink">
+            <a class="retouracceuil" href="index.phtml"><i class="fas fa-home"></i>Retour à l'accueil</a>
+
+            <a class="deconnexion" href="deco.php"><i class="fas fa-times-circle"></i>Me déconnecter</a>
+        </section>
+        <h1 class="acceuil"><i class="fas fa-users-cog"></i> Panneau d'administration</h1>
+
+        <a class ="nouvelarticle" href="nouvelarticle.phtml"><i class="fas fa-scroll"></i>Rédiger un nouvel article</a>
+
+        <h3 class="entetetableau">Liste des articles</h3>
+
+        <table id="listeTableauarticle">
+            <tr>
+                <th class="thtitre">Titre</th>
+                <th class="tharticle">Article</th>
+                <th class="thautheur">Auteur</th>
+                <th class="thcategorie">Catégorie</th>
+                <th class="hide"></th>
+                <th class="hide"></th>
+            </tr>
+
+           
+           <?php foreach($articles as $article){
+            
+            echo 
+            "<tr>
+            <td><a class='tableaulien' href='donneearticle.php?id=".$article['id_article']."'>".$article['titre']."</a></td>
+            <td>".$article['article']."</td>
+            <td>".$article['pseudo']."</td>
+            <td>".$article['categorie']."</td>
+            <td class='hidetd'><a href=Modifarticle.php?id=".$article['id_article']."><i class='fas fa-pencil-alt'></i></a></td>
+            <td class='hidetd'><a href=suparticle.php?id=".$article['id_article']."><i class='fas fa-times'></i></a></td>
+            </tr>";
+                
+                }
+            
+
+            ?>
+        </table>
+        <blockquote><em>Le blog de Mathieu sur Final Fantasy</em></blockquote>
+    </main>
+
+
+
+
+
+
+<footer>
+        
+    </footer>
+
+    </body>
+</html>
