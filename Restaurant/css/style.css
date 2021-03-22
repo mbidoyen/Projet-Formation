@@ -1,0 +1,530 @@
+header{
+
+    border-top: 30px solid red ;
+}
+
+header section{
+    display: flex;
+    flex-direction: row;
+    margin: 3% auto;
+    justify-content: center;
+    align-items: center;
+}
+
+header section img{
+    width: 5%;
+    height: 5%;
+    margin: 1%;
+    
+}
+
+header section h1 a{
+    color: #EF4036;
+    font-family: 'Redressed', cursive;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    font-size: 300%;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+
+.userbutton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+
+
+.userbutton a{
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #039BE5;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.userbutton p{
+    text-align: right;
+    margin-bottom: 0%;
+    width: 55%;
+}
+
+.userbutton p a{
+    background-color: transparent;
+    color: #039BE5;
+    padding: 0;
+    
+}
+
+.nomclient{
+    width: 75% !important;
+
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*********************************PAGE D'ACCEUIL*****************************************/
+.alacarte{
+    text-align: center;
+    font-family: 'Redressed', cursive;
+    font-style: italic;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #039BE5;
+    font-size: 300%;
+}
+
+.listeproduit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listeproduit img{
+    width:17%;
+    opacity: 0.8;
+    margin: 1%;
+    margin-left: 0%;
+}
+
+.nomproduit{
+    width:100%;
+}
+
+.description-prix{
+   display: flex;
+   flex-direction: row;
+}
+
+.description{
+    width: 90%;
+}
+
+.prix{
+    margin: 0 1%;
+    font-weight: bolder;
+}
+
+/***********************************PAGE INSCRIPTION****************************************************/
+
+.creationclient{
+    font-family: 'Open Sans', sans-serif;
+    color: #039BE5;
+    font-size: 27px;
+}
+
+.creationclient i{
+    margin:10px;
+}
+
+fieldset{
+    border: #039BE5 solid 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1% 0%;
+}
+
+legend{
+    
+    font-family: 'Open Sans', sans-serif;
+    color: #039BE5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fas{
+    margin-left: 5px;
+}
+
+.identite article{
+    width: 90%;
+    margin : 1% auto;
+}
+
+.identite label{
+    width: 35%;
+    display: inline-block;
+    float: left;
+    margin-right: 1%;
+    text-align: right;
+    
+}
+
+.identite input{
+    width: 30%;
+}
+
+textarea{
+    width:30%;
+    resize: none;
+}
+
+.authentification article{
+    width: 90%;
+    margin : 1% auto;
+}
+
+.authentification label{
+    width: 35%;
+    display: inline-block;
+    float: left;
+    margin-right: 1%;
+    text-align: right;
+}
+
+.authentification input{
+    width: 30%;
+}
+
+.validinscription{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.envoyer{
+    cursor: pointer;
+    background-color: #039BE5;
+    color: white;
+    font-size: 150%;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    padding: 1%;
+    outline-style: none;
+}
+
+.annuler{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 1%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    border: none;
+    outline-style: none;
+}
+
+/****************************PAGE LOGIN********************/
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.login input{
+    margin: 0% 1%;
+}
+
+/***********************PANNEAU ADMINISTRATION************/
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #039BE5;
+    color: white;
+  }
+
+  
+
+  #customers td button{
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      color:blue;
+      outline-style: none;
+  }
+  /*******************PAGE MEAL**************************/
+.meal{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+  #photo{
+      width:23%;
+  }
+
+  .photosize{
+    width: 50%;
+  }
+
+  #customers .photo{
+    
+      text-align: left;
+      align-items: center;
+      display: flex;
+  }
+
+  #customers .photo p{
+      width : 50%;
+      margin-left: 10%;
+  }
+
+  #customers .stock{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  #customers .stock input{
+      width: 50%;
+  }
+
+  #customers .stock #addstock{
+      width: 20%;
+      margin: 0 5%;  
+  }
+
+  .supprimerunproduit i{
+      font-size: 200%;
+  }
+
+small{
+    text-align: center;
+}
+
+  /**********************AJOUT ADMINISTRATEUR***************/
+
+  .creeradmin{
+    cursor: pointer;
+    background-color: #039BE5;
+    color: white;
+    font-size: 100%;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    padding: 1%;
+}
+
+#AdminEmail{
+    font-size: 120%;
+    margin-bottom: 2%;
+}
+
+#customers .select{
+    width: 10%;
+}
+
+#customers .iconeadmin{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+#customers .iconeadmin i {
+    font-size: 150%;
+}
+
+/********************************RESERVATION*************************************/
+
+.sectioncentrer{
+    text-align: center;
+}
+
+/*****************************COMMANDER**********************************/
+
+.commande{
+    display: flex;
+    flex-direction: column;
+}
+
+.commande article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+    margin: 1% 0%;
+}
+
+
+
+#produits{
+    width: 50%;
+    margin: 3% 0%;
+}
+
+.detailsproduit{
+    border-color: cyan;
+    display: flex;
+    flex-direction: row;
+}
+
+.detailsproduit .imagecommande{
+    width: 15%;
+    margin:1%;
+}
+
+.detailsproduit .description-produits{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 2%;
+}
+
+.addproducts{
+        margin-left: 15%;
+        width: 7%;
+        cursor: pointer;
+        background-color: #039BE5;
+        color: white;
+        font-size: 100%;
+        border-radius: 10px;
+        font-weight: bolder;
+        font-family: 'Open Sans', sans-serif;
+        border: none;
+        padding: 1%;
+        outline-style: none;
+    
+}
+
+.quantite{
+    margin-right: 36%;
+    width:12%;
+}
+
+.photosizepanier{
+    width: 22%;
+    margin-right: 10%;
+}
+
+.italic{
+    font-style: italic;
+
+}
+
+.Prix{
+    padding-right: 5% !important;
+    text-align: right;
+}
+
+.TCC{
+    color: blue;
+}
+
+.deletepanierproduits{
+    font-size: 200%;
+}
+
+/*****************************ACHAT EFFECTUEE*******************************************/
+
+.commandevalidee{
+    font-family: 'Open Sans', sans-serif;
+    color: #039BE5;
+    font-size: 27px;
+    text-align: center;
+}
+
+
+.textvalidcommande{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.imagevalidcommande{
+    width: 30%;
+    margin: 0 35%;
+}
+
+.retouralacceuil{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+/*************************DETAIL COMPTE********************************/
+
+.Afficherlescommandes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.detailscompte{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#detailcommandes {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 45%;
+    text-align: center;
+  }
+  
+  #detailcommandes td, #detailcommandes th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #detailcommandes tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #detailcommandes tr:hover {background-color: #ddd;}
+  
+  #detailcommandes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #039BE5;
+    color: white;
+  }
+
+  /******************************************/
+
+
+#ShowOrderProfil {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 45%;
+    text-align: center;
+  }
+  
+  #ShowOrderProfil td, #ShowOrderProfil th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #ShowOrderProfil tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #ShowOrderProfil tr:hover {background-color: #ddd;}
+  
+  #ShowOrderProfil th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #039BE5;
+    color: white;
+  }
