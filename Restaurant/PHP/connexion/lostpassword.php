@@ -27,24 +27,17 @@
 </section>
     <main>
 
-    <h2 class="creationclient"><i class="fas fa-lock"></i>Se connecter avec un compte utilisateur</h2>
+    <h2 class="creationclient"><i class="fas fa-lock"></i>Mot de passe oublié</h2>
 
-    <form action="validlogin.php" method="POST">
+    <form action="EnvoiedeMail.php" method="POST">
 
         <fieldset class="login">
 
             <legend>Information d'authentification</legend>
 
-            <label for="email">E-mail :</label>
-            <input type="email" name="email">
-
-            <label for="password">Mot de passe :</label>
-            <input type="password" name="password">
-
-           
-
-            <a href="lostpassword.php">Mot de passe oublié ?</a>
-
+            <label for="email">Veuillez entrer votre adresse email :</label>
+            <input type="email" id="email" name="email">
+            
         </fieldset>
 
     <section class="validinscription">
@@ -54,8 +47,6 @@
 
     </form>
     </main>
-
-
-
+    
 </body>
 </html>

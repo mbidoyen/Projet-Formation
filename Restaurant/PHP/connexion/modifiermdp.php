@@ -1,3 +1,18 @@
+<?php
+
+include '../connexionBDD/connexionBDD.php';
+
+$query = $pdo->prepare
+
+(
+    'SELECT * FROM lost_password WHERE token = ?'
+);
+
+$passwordMd5 = md5($_GET['token']);
+$query->execute([$passwordMd5]);
+
+if($client = $query->fetch()){ ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,28 +37,20 @@
         </section>
     </header>
 
-    <section class="userbutton">
-    <a href="../inscription/formulaire inscription.php">Créer un compte</a>
-</section>
     <main>
 
-    <h2 class="creationclient"><i class="fas fa-lock"></i>Se connecter avec un compte utilisateur</h2>
+    <h2 class="creationclient"><i class="fas fa-lock"></i>Demande de changement de mot de passe</h2>
 
-    <form action="validlogin.php" method="POST">
+    <form action="validupdatepassword.php" method="POST">
 
         <fieldset class="login">
 
-            <legend>Information d'authentification</legend>
+            <legend>Modification de votre mot de passe</legend>
 
-            <label for="email">E-mail :</label>
-            <input type="email" name="email">
+            <input type="hidden" name="idclient" value="<?= $client['email'] ?>">
 
-            <label for="password">Mot de passe :</label>
+            <label for="password">Entrez votre nouveau mot de passe :</label>
             <input type="password" name="password">
-
-           
-
-            <a href="lostpassword.php">Mot de passe oublié ?</a>
 
         </fieldset>
 
@@ -54,8 +61,15 @@
 
     </form>
     </main>
-
-
-
 </body>
 </html>
+
+<?php
+
+}
+else{
+    echo 'Un problème est survenu, merci de contacter l\'administrateur du site';
+}
+
+
+?>
