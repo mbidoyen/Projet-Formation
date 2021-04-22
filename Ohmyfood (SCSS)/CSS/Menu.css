@@ -1,0 +1,334 @@
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0;
+    text-shadow: 0px 0px 3px #969696;
+  }
+  .logo, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Shrikhand', cursive;
+    color: black;
+  }
+  p, a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+  }
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  header .logo {
+    margin-bottom: 3%;
+    width: 100%;
+  }
+  header .retour-acceuil {
+    font-size: 30px;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: grey;
+  }
+  main .photo {
+    width: 100%;
+  }
+  .menu {
+    background-color: #f6f6f6;
+    border-radius: 25px 25px 0px 0px;
+    position: absolute;
+    top: 37%;
+    width: 100%;
+    height: 1071px;
+    text-align: center;
+  }
+  .menu .restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu .restaurant h1 {
+    font-size: 25px;
+  }
+  .menu .restaurant .fas {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transition-duration: 1000ms;
+            transition-duration: 1000ms;
+  }
+  .menu .restaurant .far {
+    position: absolute;
+    left: 288px;
+    margin-top: 4px;
+  }
+  .menu .restaurant .coeur-palette {
+    left: 302px !important;
+  }
+  .menu .restaurant .coeur-delice {
+    left: 299px !important;
+  }
+  .menu .restaurant .coeur {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 40px;
+    outline-style: none;
+    -webkit-transition: all 1000ms;
+    transition: all 1000ms;
+  }
+  .menu .restaurant .coeur:hover {
+    color: pink;
+  }
+  .menu .restaurant .coeur:hover .fas {
+    font-size: 40px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: pink;
+    z-index: 3;
+  }
+  .menu .entrees {
+    width: 90%;
+    margin: 10% auto;
+    margin-top: 0%;
+  }
+  .menu .entrees .Bloc-plats {
+    font-weight: lighter;
+    border-bottom: 3px solid #99e2d0;
+    width: 12%;
+  }
+  .menu .entrees .plat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    margin: 3% auto;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 5px 5px #edebeb;
+            box-shadow: 0px 0px 5px 5px #edebeb;
+    height: 70px;
+    cursor: pointer;
+    -webkit-animation-name: ShowPlats;
+            animation-name: ShowPlats;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  .menu .entrees .plat:nth-child(1) {
+    -webkit-animation-name: ShowPlats;
+            animation-name: ShowPlats;
+    -webkit-animation-duration: 200ms;
+            animation-duration: 200ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menu .entrees .plat:nth-child(2) {
+    -webkit-animation-name: ShowPlats;
+            animation-name: ShowPlats;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menu .entrees .plat:nth-child(3) {
+    -webkit-animation-name: ShowPlats;
+            animation-name: ShowPlats;
+    -webkit-animation-duration: 600ms;
+            animation-duration: 600ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menu .entrees .plat:nth-child(4) {
+    -webkit-animation-name: ShowPlats;
+            animation-name: ShowPlats;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menu .entrees .plat .info {
+    width: 90%;
+    margin: 0 auto;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+  }
+  .menu .entrees .plat .info .nom-plat {
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 15%;
+  }
+  .menu .entrees .plat .info .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .menu .entrees .plat .info .description .span-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+    font-weight: 300;
+    margin-right: 3%;
+  }
+  .menu .entrees .plat .info .description span {
+    font-weight: bold;
+  }
+  .menu .entrees .plat .check {
+    width: 0%;
+    background-color: #99e2d0;
+    height: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 0px 25px 25px 0px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+  }
+  .menu .entrees .plat .check i {
+    margin: 20px auto;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+  }
+  .menu .entrees :hover .check {
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .menu .entrees :hover .check i {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  .menu .entrees :hover .info {
+    width: 70%;
+  }
+  @-webkit-keyframes ShowPlats {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes ShowPlats {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  .enchantee {
+    height: 1150px;
+  }
+  .commander {
+    -webkit-box-shadow: 0px 1px 1px 1px #dbdbdb;
+            box-shadow: 0px 1px 1px 1px #dbdbdb;
+    border-radius: 70px;
+    color: white;
+    text-decoration: none;
+    padding: 5%;
+    background: -webkit-gradient(linear, right bottom, left top, from(#9356DC), to(#FF79DA));
+    background: linear-gradient(to top left, #9356DC, #FF79DA);
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+  }
+  .commander:hover {
+    background: -webkit-gradient(linear, right bottom, left top, from(#a676e2), to(#fa9de0));
+    background: linear-gradient(to top left, #a676e2, #fa9de0);
+    -webkit-box-shadow: 0px 1px 1px 1px #969696;
+            box-shadow: 0px 1px 1px 1px #969696;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #353535;
+    color: white;
+    padding: 10%;
+    margin-top: 263%;
+  }
+  footer h5 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 3%;
+    color: white !important;
+  }
+  footer a {
+    text-decoration: none;
+    color: white;
+    line-height: 25px;
+  }
+  footer a i {
+    margin-right: 3%;
+    width: 5%;
+  }
+  .footer-enchantee {
+    margin-top: 228% !important;
+  }
+  .footer-palette {
+    margin-top: 268% !important;
+  }
+}
+/*# sourceMappingURL=Menu.css.map */

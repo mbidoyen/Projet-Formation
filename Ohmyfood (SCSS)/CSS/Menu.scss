@@ -1,0 +1,282 @@
+@media screen and (max-width : 480px){
+    $violet : #9356DC;
+    $grisclair: #F6F6F6;
+        body{
+            margin: 0;
+            text-shadow: 0px 0px 3px rgba(150, 150, 150, 1);
+        }
+    
+        .logo, h1, h2, h3, h4, h5, h6{
+            font-family: 'Shrikhand', cursive;
+            color:black;
+        }
+        
+        p, a{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+    
+        header{
+            align-items: center;
+            text-align: center;
+            
+            .logo{
+                margin-bottom: 3%;
+                width: 100%;
+            }
+            .retour-acceuil{
+                font-size: 30px;
+                position:absolute;
+                left: 25px;
+                top: 25px;
+                color:grey;
+            }
+        }
+
+        main{
+            .photo{
+                width: 100%;
+                
+            }
+        }   .menu{
+            background-color: rgb(246,246,246);
+            border-radius: 25px 25px 0px 0px;
+            position: absolute;
+            top: 37%;
+            width: 100%;
+            height: 1071px;
+            text-align: center;
+            
+            .restaurant{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                h1{
+                    font-size: 25px;               
+                }
+                .fas{
+                    cursor: pointer;
+                    border:none;
+                    background-color: transparent;                        
+                    transform: scale(0);               
+                    transform-origin: center;
+                    transition-duration: 1000ms;
+
+                }
+
+                .far{
+                    position:absolute;
+                    left: 288px;
+                    margin-top: 4px;
+                }
+
+                .coeur-palette{
+                    left:302px !important;
+                }
+
+                .coeur-delice{
+                    left: 299px !important;
+                }
+
+                .coeur{
+                   
+                    cursor: pointer;
+                    border:none;
+                    background-color: transparent;
+                    font-size: 40px;
+                    outline-style: none;
+                    transition: all 1000ms;
+                    &:hover{
+                        
+                        color:pink;
+                        .fas{
+                            font-size: 40px;
+                            transform: scale(1);
+                            color:pink;
+                            z-index: 3;
+                        }
+                        
+                        
+                    }
+                }
+                
+                
+            }
+
+            .entrees{
+                
+                width: 90%;
+                margin: 10% auto;
+                margin-top: 0%;
+                .Bloc-plats{
+                    font-weight: lighter;
+                    border-bottom: 3px solid rgb(153,226,208);
+                    width: 12%;
+                }
+            .plat{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: white;
+                margin: 3% auto;
+                border-radius: 25px;
+                box-shadow: 0px 0px 5px 5px #edebeb;
+                height: 70px;
+                cursor: pointer;
+                animation-name: ShowPlats;
+                animation-duration: 400ms;
+                animation-timing-function: ease;
+
+                @for $i from 1 through 4{
+                    &:nth-child(#{$i}){
+                        animation-name: ShowPlats;
+                        animation-duration: 200ms * $i;
+                        animation-timing-function: ease;
+                        animation-fill-mode: forwards;
+                    }
+                
+                }
+                
+                .info{
+                    
+                    width: 90%;
+                    margin: 0 auto;
+                    transition: all 400ms;
+                    .nom-plat{
+                        font-weight: bold;
+                        text-align: left;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin-right: 15%;
+ 
+                    }
+                    .description{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        font-weight: 300;
+                       
+                        
+                        .span-overflow{
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width:100%;
+                            text-align: left;
+                            font-weight: 300;
+                            margin-right: 3%;
+                            
+                            
+                        }
+                        span{
+                            font-weight: bold;
+                            
+                        }
+                    }
+                }
+                
+                .check{
+                    
+                    width: 0%;
+                    background-color: #99e2d0;
+                    height: 70px;
+                    white-space: nowrap;
+                    overflow: hidden;   
+                    font-size: 30px;
+                    text-align: center;
+                    color: white;
+                    border-radius: 0px 25px 25px 0px;
+                    transition: all 400ms;
+                    i{
+                        margin: 20px auto;
+                        transition: all 400ms;
+                    }
+                }
+            }:hover .check{ 
+                width: 20%;
+                
+                white-space: nowrap;
+                overflow: hidden;   
+                i {
+                    
+                    transform: rotate(-360deg);
+                                 
+                }
+            }:hover .info{
+                
+                width: 70%;
+                      
+            }
+    }    }
+    @keyframes ShowPlats{
+        0%{
+            opacity: 0;            
+            transform: translateX(-100px);
+        }
+
+        50%{
+            opacity: 0.3;
+        }
+    
+        80%{
+            opacity: 0.5;
+        }
+
+        100%{
+            opacity: 1;            
+            transform: translateX(0px);
+        }
+    }
+        .enchantee{
+            height:1150px;
+        }
+        .commander{
+                
+                box-shadow: 0px 1px 1px 1px rgba(219,219,219,1);
+                border-radius: 70px;
+                color: white;
+                text-decoration: none;
+                padding:5%;
+                background: linear-gradient(to top left, #9356DC, #FF79DA);
+                transition: all 400ms;
+                &:hover{
+                    background: linear-gradient(to top left, #a676e2, #fa9de0);
+                    box-shadow: 0px 1px 1px 1px #969696;
+                }
+            }
+
+
+        footer{
+            display:flex;
+            flex-direction: column;
+            background-color: rgb(53,53,53);
+            color:white;
+            padding:10%;
+            margin-top: 263%;
+            h5{
+                margin:0;
+                font-size: 20px;
+                margin-bottom: 3%;
+                color: white !important;
+            }
+            a{
+                text-decoration: none;
+                color:white;
+                line-height: 25px;
+               i{
+                margin-right: 3%;
+                width: 5%;
+            } 
+            }
+        
+
+    }.footer-enchantee{
+            margin-top: 228% !important;
+        }
+        .footer-palette{
+            margin-top: 268% !important;
+        }
+        
+}
