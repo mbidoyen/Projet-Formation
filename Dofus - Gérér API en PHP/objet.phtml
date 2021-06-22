@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/ec539eaecf.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="CSS/style.css">
+        <title>Encyclopedie Dofus</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.phtml"><img src="Images/Logo Dofus.png" class="logo" alt="Logo Dofus"></a>
+            <nav id="navbar" class="navbar">
+                <a href="chapeaux.phtml"><img src="Images/chapeau.png" class="icone_nav">Chapeaux</a>
+                <a href="Amulettes.phtml"><img src="Images/amulette.png" class="icone_nav">Amulettes</a>
+                <a href="Ceintures.phtml"><img src="Images/ceinture.png" class="icone_nav">Ceintures</a>
+                <a href="Anneaux.phtml"><img src="Images/anneau.png" class="icone_nav">Anneaux</a>
+                <a href="Bottes.phtml"><img src="Images/botte.png" class="icone_nav">Bottes</a>
+                <a href="Capes.phtml"><img src="Images/cape.png" class="icone_nav">Capes</a>
+                <a href="Pets.phtml"><img src="Images/pets.png" class="incone_nav">Pets</a>
+            </nav>
+
+        </header>
+        <?php 
+                session_start();
+                if(isset($_SESSION['id_user'])){ ?>
+                    <section>
+                        <p class="user">Bonjour <?= $_SESSION['pseudo'] ?></p>
+                        <a href="equipement.phtml">Mon équipements</a>
+                        <a href="sedeconnecter.php">Se déconnecter</a>
+                    </section>
+
+              <?php } else { 
+                  
+                  ?>
+                  
+                <section>
+
+                <form action="login.php" method="POST" name="login" id="login">
+
+                     <label for="email">Email : </label>
+                    <input type="email" name="email" require>
+                
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" name="password">
+                
+                <input type="submit" value="Se connecter" id="login_button">
+
+                </form>
+
+               <button id="button_inscription">Pas encore inscrit ?</button>
+
+              
+
+                <form action="inscription.php" method="POST" id="inscription" class="hide">
+                    <fieldset>
+
+                    <legend>Inscription</legend>
+                    
+                    
+                        <label for="email">Entrez votre adresse email : </label>
+                    <input type="email" name="email" id="email" require>
+                    
+                    
+                    
+                        <label for="password">Entrez votre mot de passe : </label>
+                        <input type="password" name="password" require>
+                    
+                        <label for="pseudo">Choisissez votre pseudonyme : </label>
+                        <input type="text" name="pseudo" require>
+                    
+
+                    <input type="submit" value="S'inscrire" id="Subscribe_button">
+                </form>
+            </fieldset>
+               
+
+                
+            </section>
+
+            <?php
+
+if($_GET['err'] == 1 ){?>
+<p class="error">Vous êtes déjà inscrit sur le site.</p>
+<?php } else if($_GET['success'] == 1) {?>
+        <p class="success">Inscription réussie</p>
+
+        <?php } ?>
+
+            <?php 
+
+if($_GET['err'] == 2){?>
+    <p class="error">Vos informations sont incorrect.</p>
+<?php } ?>
+                  
+                 
+            
+             <?php } ?>
+        <main>
+ <?php
+
+$datas = file_get_contents('https://fr.dofus.dofapi.fr/equipments/'.$_GET["id"]);// Fais appel à l'API sur une URL
+
+$objet = json_decode($datas, TRUE);
+
+
+include 'utilities.php';?>
+
+        <h1 class="TitreObjet"><?= $objet['name'] ?></h1>
+        <section class="DescriptionObjet">
+        
+
+        <article>
+                <h2>Description : </h2>
+                <p><?= $objet['description'] ?></p>
+               
+        </article>
+
+        <article>
+        <h2>Niveau d'objet : <?=$objet['level'] ?></h2>
+        </section>
+
+        <section class="caracteristique">
+                <article class="statistique">
+                    <h2>Statistiques :</h2>
+                    <?php
+                    Statistiques($objet);
+                    ?>
+                </article>
+
+                <article class="recette">
+                    <h2>Recette :</h2>
+                    <?php
+                    Recettes($objet);
+                    ?>
+                </article>
+                
+        </section>
+<?php
+ if(isset($_SESSION['id_user'])){ ?>
+     <button id="ajouter" value="<?=$objet['_id']?>">Ajouter l'objet à mon équipement</button>
+<?php } ?>
+
+
+       
+        
+        </main>
+
+        <footer>
+            <p>Dofapi</p>
+        </footer>
+
+<script src="javascript/ajouterpanier.js"></script>
+<script src="javascript/jquerycss.js"></script>
+    </body>
+    </html>
+
+
+       

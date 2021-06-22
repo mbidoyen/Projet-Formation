@@ -1,0 +1,491 @@
+/*******************HEADER**********************/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: black;
+}
+
+header img {
+  width: 70%;
+}
+
+header a {
+  font-family: 'Pangolin', cursive;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+header a:hover {
+  color: #84B13F;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav a img {
+  width: 50%;
+  height: 50%;
+}
+
+section {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1% 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section form label {
+  width: 25%;
+  color: white;
+  text-align: right;
+  font-family: 'Pangolin', cursive;
+}
+
+section form input {
+  margin: 0 1%;
+  border: grey solid 2px;
+  background-color: cornsilk;
+  border-radius: 25px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  font-family: 'Pangolin', cursive;
+  width: 30%;
+  font-size: 14px;
+  padding: 3px;
+  text-align: center;
+  outline: none;
+}
+
+section form input:hover {
+  background-color: #fff1b7;
+}
+
+section form #login_button {
+  cursor: pointer;
+}
+
+section #inscription {
+  width: 16%;
+}
+
+section #inscription fieldset {
+  padding: 1%;
+  border-radius: 25px;
+  background-color: #9B8F86;
+  border: 2px solid #FBC950;
+}
+
+section #inscription fieldset legend {
+  font-family: 'Pangolin', cursive;
+  color: #FBC950;
+}
+
+section .show_block {
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1%;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section .show_block label {
+  width: 100%;
+}
+
+section .show_block input {
+  width: 90%;
+  margin: 1% auto;
+}
+
+section .hide {
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 1%;
+  width: 0%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section #button_inscription {
+  width: 16%;
+  font-family: 'Pangolin', cursive;
+  margin: 0;
+  font-size: 14px;
+  padding: 3px;
+}
+
+a {
+  font-family: 'Pangolin', cursive;
+  text-decoration: none;
+  color: white;
+  margin: 0 2%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+a:hover {
+  color: #84B13F;
+}
+
+.user {
+  margin: 0 2%;
+  font-weight: bold;
+  color: #84B13F;
+}
+
+.success {
+  margin: 0% 5%;
+  font-weight: bold;
+  color: #84B13F;
+}
+
+.error {
+  margin: 0% 5%;
+  font-weight: bold;
+  color: red;
+}
+
+body {
+  background-image: url("../Images/font ecran dofus.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0%;
+  width: 100%;
+}
+
+/**********************************Liste Objet******************/
+main {
+  text-align: center;
+}
+
+main h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Pangolin', cursive;
+  width: 90%;
+  margin: 1% auto;
+}
+
+main #ListeObjet {
+  width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: #FBC950;
+}
+
+main #ListeObjet td, main #ListeObjet th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+main #ListeObjet tr:nth-child(even) {
+  background-color: #5a5551;
+}
+
+main #ListeObjet tr:nth-child(odd) {
+  background-color: #6F655E;
+}
+
+main #ListeObjet tr:hover {
+  background-color: #9b8f86;
+}
+
+main #ListeObjet th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #84B13F;
+  color: white;
+}
+
+main #ListeObjet .NomObjet {
+  width: 20%;
+  text-align: center;
+  font-family: 'Pangolin', cursive;
+}
+
+main #ListeObjet .NomObjet a {
+  text-decoration: none;
+  color: #FBC950;
+}
+
+main #ListeObjet .description {
+  width: 50%;
+}
+
+main #ListeObjet .niveau {
+  text-align: center;
+  width: 1%;
+}
+
+main #ListeObjet .statistique {
+  width: 20%;
+  padding: 2%;
+}
+
+/***********************DETAIL OBJET******************/
+.TitreObjet {
+  background-color: #9B8F86;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 0 auto;
+  padding-top: 1%;
+}
+
+.DescriptionObjet {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #9B8F86;
+  border-bottom: grey solid 2px;
+}
+
+.DescriptionObjet article {
+  width: 50%;
+}
+
+.caracteristique {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #9B8F86;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 1%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.caracteristique .statistique {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+button {
+  margin: 1% auto;
+  font-size: 20px;
+  border: grey solid 2px;
+  background-color: cornsilk;
+  padding: 1%;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+button:hover {
+  background-color: #fff1b7;
+}
+
+/*********************************************RESSOURCES***********************************/
+.DescriptionRessources {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #9B8F86;
+  border-bottom: grey solid 2px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/*********************************EQUIPEMENTS******************************/
+#equipement {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  color: #FBC950;
+}
+
+#equipement td, #equipement th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#equipement th {
+  text-align: center !important;
+}
+
+#equipement tr:nth-child(even) {
+  background-color: #5a5551;
+}
+
+#equipement tr:nth-child(odd) {
+  background-color: #6F655E;
+}
+
+#equipement tr:hover {
+  background-color: #9b8f86;
+}
+
+#equipement th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #84B13F;
+  color: white;
+}
+
+#equipement .NomObjet {
+  width: 20%;
+  text-align: center;
+  font-family: 'Pangolin', cursive;
+}
+
+#equipement .NomObjet a {
+  text-decoration: none;
+  color: #FBC950;
+}
+
+#equipement .description {
+  width: 50%;
+}
+
+#equipement .niveau {
+  text-align: center;
+  width: 1%;
+}
+
+#equipement .Equipement_Statistique {
+  width: 30%;
+  padding: 2%;
+}
+
+#equipement .Total_Statistique {
+  text-align: right;
+  font-weight: bold;
+}
+
+/*********************FOOTER*******************/
+footer {
+  width: 100%;
+  margin-top: 3%;
+  background-color: black;
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3% 0%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */
